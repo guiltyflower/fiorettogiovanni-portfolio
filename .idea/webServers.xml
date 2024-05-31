@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5dbdb450-f085-4cf4-9ee9-d20c1d2ad682" name="fiorettogiovanni" url="http://access906501151.webspace-data.io">
+        <fileTransfer accessType="SFTP" host="access906501151.webspace-data.io" port="22" sshConfigId="944e68a1-246d-4d36-bce6-7fea48ba9246" sshConfig="u107953345@access906501151.webspace-data.io:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

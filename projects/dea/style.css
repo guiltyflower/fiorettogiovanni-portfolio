@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@100;300;400;500;700&display=swap');
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+:root{
+    --white:#ffffff;
+    --black:#13131a;
+    --turchese:  #99fdff;
+    --blu: #0063DB;
+    --border: .1rem solid rgba(0,75,90,.3)
+}
+
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+
+html{
+/*    font-size: 62.5%; */
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*
+modify scrollbar
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+    border-radius: .5rem;
+}
+ */
+
+section{
+    padding: 2rem 7%;
+}
+
+body{
+    background: var(--white);
+}
+
+/* ----------header---------- */
+.header{
+    background: var(--turchese);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.header .logo img{
+    height: 3.5rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: var(--blu);
+}
+
+.header .navbar a:hover{
+    color: red;
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .3rem;
+
+}
+
+/* ----------end header---------- */
+
+/* ----------home---------- */
+
+.home{
+    top: 60px;
+    position: relative;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    background: var(--turchese);
+    flex-wrap: wrap;
+}
+
+.home .row .image{
+    flex: 1 1 15rem;
+}
+
+.home .row .image img{
+    width: 100%;
+}
+
+.home .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.home .row .content h3{
+    font-size: 3rem;
+    color: var(--blu);
+}
+
+.home .row .content h5{
+    font-size: 1.5rem;
+    color: var(--blu);
+    align-items: center;
+}
+
+.home .row .content p{
+    font-size: 1rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/* ----------end home---------- */
+
+/* ----------formation---------- */
+
+.formation{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.formation h3{
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--blu);
+}
+.formation ul{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.formation p{
+    font-size: 1.3rem;
+    color: var(--blu);
+    margin-bottom: 8px;
+}
+
+.formation h5{
+    font-size: 1.5rem;
+}
+
+/* ----------end formation---------- */
+
+/* ----------contact---------- */
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--turchese);
+}
+
+.contact h3{
+    margin-bottom: 25px;
+}
+.contact form{
+    width: 90%;
+    max-width: 600px;
+}
+
+.contact .input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .row .input-group{
+    flex-basis: 48%;
+}
+
+.contact input,textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border:  var(--border);
+    color: var(--black);
+    background: transparent;
+    font-size: 15px;
+}
+
+.contact label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: var(--black);
+    cursor: text;
+    transition: 0.2s;
+}
+
+.contact input:focus~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.contact input:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.contact textarea:focus~label,
+.contact textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.contact button{
+    padding: 10px 0;
+    color: var(--black);
+    outline: none;
+    background: transparent;
+    border: var(--border);
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact button:hover{
+
+    background-color: var(--blu);
+}
+
+/* ----------end contact---------- */
+
+
+
+
+/* ----------counters---------- */
+
+/* Float four columns side by side */
+.counter .column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+
+.counter .row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.counter .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .counter .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Style the counter cards */
+.counter .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: var(--turchese);
+    color: black;
+}
+
+.counter .fa {
+    font-size:50px;
+    color: var(--blu);
+}
+
+/* ----------end counters---------- */
+
+
+
+/* ----------footer---------- */
+
+.footer{
+    top: 6000px;
+    background: var(--turchese);
+    text-align: center;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: var(--blu);
+    border: var(--border);
+    font-size: 1.5rem;
+}
+
+.footer .links a:hover{
+    background: var(--blu);
+    color: white;
+}
+
+.footer .credits{
+    font-size: 1.3rem;
+    color: var(--blu);
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credits span{
+    color: red;
+}
+
+.footer .credits a:hover{
+    color: red;
+}
+
+/* ----------end footer---------- */
